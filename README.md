@@ -3,7 +3,7 @@ Track the file download process.
 
 ## <a href="https://pypi.org/project/PyEasyDownloader/">Installation </a>:
 
-```
+```Python
 pip install PyEasyDownloader
 ```
 </br>
