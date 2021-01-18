@@ -114,7 +114,7 @@ file.progress_bar(step=int_value)
 Пример:
 
 ```
-[----------         ]
+[==========         ]
 ```
 </br></br>
 
