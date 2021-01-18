@@ -1,6 +1,8 @@
 # PyEasyDownloader
 Track the file download process.
 
+<a href="REAME_RU.md" ><img src="https://emojio.ru/images/twitter-64/1f1f7-1f1fa.png" width="30" height="30"></img>Читать на Русском</a>
+
 ## <a href="https://pypi.org/project/PyEasyDownloader/">Installation </a>:
 
 ```Python
