@@ -101,7 +101,7 @@ file.progress_bar()
 
 #### Progress bar
 Takes values:</br>
-**step** — *default 5*
+**step** — *default 5* (optional to indicate)
 ```Python
 file.progress_bar(step=int_value)
 ```
