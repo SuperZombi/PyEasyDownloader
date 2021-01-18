@@ -112,6 +112,23 @@ Example:
 ```
 [==========         ]
 ```
+</br>
+
+#### Pause and Resume download
+
+```Python
+# pause
+file.pause = True
+# resume
+file.pause = False
+```
+</br>
+
+#### Cancel downloading
+```Python
+file.cancel()
+```
+
 </br></br>
 
 ### Display statistics after download is complete
