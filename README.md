@@ -122,7 +122,6 @@ file.pause = True
 # resume
 file.pause = False
 ```
-</br>
 
 #### Cancel downloading
 ```Python
