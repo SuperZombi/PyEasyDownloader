@@ -30,12 +30,12 @@ Downloaded: 5.81 MB  |  16%  |  Speed: 6.3 MB/sec
 ...
 Download time: 6.03sec  |  Average speed: 5.7 MB/sec
 ```
-</br></br></br></br>
+</br></br></br>
 
 
-### Let's see the details
+## Let's see the details
 
-#### Change the language
+### Change the language
 This allows the units of measurement to be displayed in your language. </br>
 Supported languages: </br>
 English - **EN** </br>
@@ -45,13 +45,13 @@ set_lang("RU")
 ```
 </br></br>
 
-#### Indicate a link to the file
+### Indicate a link to the file
 ```Python
 file = Downloader("https://example.zip")
 ```
 </br></br>
 
-#### Get file size
+### Get file size
 ```Python
 print(file.size_str()) # auto size (Recommended)
 
@@ -62,7 +62,7 @@ print(file.size_GB) # in gigabytes
 ```
 </br></br>
 
-#### Start download
+### Start download
 Two download modes: </br>
 <ul>
 <li>Super mode (While the file is downloading, you can receive actual progress) </li>
@@ -96,15 +96,26 @@ file.percents
 
 file.progress_bar()
 ```
+</br>
 
 #### Progress bar
 Takes values:</br>
-step — default 5
+**step** — *default 5*
 ```Python
-progress_bar(step=int_value)
+file.progress_bar(step=int_value)
 ```
 Example:
 
 ```
 [----------         ]
+```
+</br></br>
+
+### Display statistics after download is complete
+
+```Python
+file.time_str() # auto (Recommended)
+file.time() # in seconds
+
+file.speed_str() # average speed
 ```
