@@ -18,7 +18,7 @@ print(file.size_str())
 file.download("download.zip")
 while file.finished != True:
 	print("Downloaded: " + file.downloaded_str() + " | " + str(file.percents) + "% | Speed: " + file.speed_str())
-  sleep(1)
+	sleep(1)
 print("Download time: " + str(file.time_str()) + " | Average speed: " + file.speed_str())
 ```
 </br>
