@@ -1,6 +1,8 @@
 # PyEasyDownloader
 Отслеживайте процесс загрузки файла.
 
+<a href="REAME.md" ><img src="https://emojio.ru/images/twitter-64/1f1fa-1f1f8.png" width="30" height="30"></img>Read in English</a>
+
 ## <a href="https://pypi.org/project/PyEasyDownloader/">Установка </a>:
 
 ```Python
