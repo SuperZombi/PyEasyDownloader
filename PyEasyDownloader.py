@@ -42,6 +42,8 @@ class Downloader:
 	percents = 0
 	finished = False
 	time = None
+	pause = False
+	__cancel = False
 
 	def __init__(self, link):
 		self.link = link
@@ -93,13 +95,16 @@ class Downloader:
 		x = self.percents
 		while i < 100:
 			if x >= i:
-				bar += "-"
+				bar += "="
 			else:
 				bar += " "
 			i+=step
 		bar+="]"
 		return bar
 
+
+	def cancel(self):
+		self.__cancel = True
 
 
 	def __downloading(self):
@@ -108,6 +113,13 @@ class Downloader:
 			self.__now1 = self.__start = time.time()
 
 			for data in self.__response.iter_content(chunk_size=4096):
+				if self.__cancel:
+					break
+				if self.pause == True:
+					print("\npaused\n")
+					while self.pause:
+						self.__start += 0.1
+						time.sleep(0.1)
 				self.downloaded += len(data)
 				self.percents = int(self.downloaded * 100 / self.size)
 				f.write(data)
