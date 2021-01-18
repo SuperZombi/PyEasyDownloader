@@ -1,7 +1,7 @@
 # PyEasyDownloader
 Track the file download process.
 
-## <a href="https://pypi.org/project/PyEasyDownloader/">Installation </a>:
+## <a href="https://pypi.org/project/PyEasyDownloader/" target="_blank">Installation </a>:
 
 ```
 pip install PyEasyDownloader
