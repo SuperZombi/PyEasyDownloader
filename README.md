@@ -124,8 +124,15 @@ file.pause = False
 ```
 
 #### Cancel downloading
+
+Takes values:</br>
+**delete** — *default True* (optional to indicate)
 ```Python
+# The broken file will be deleted
 file.cancel()
+
+# Broken file will not be deleted
+file.cancel(delete=False)
 ```
 
 </br></br>
