@@ -2,6 +2,7 @@ import requests
 import time
 import threading
 import sys
+import os
 
 def set_lang(LANG):
 	if LANG in Downloader.languages_code:
@@ -103,8 +104,15 @@ class Downloader:
 		return bar
 
 
-	def cancel(self):
+	def cancel(self, delete=True):
 		self.__cancel = True
+		if delete:
+			if self.finished:
+				try:
+					os.remove(self.file_name)	
+				except:
+					pass
+
 
 
 	def __downloading(self):
@@ -115,22 +123,20 @@ class Downloader:
 			for data in self.__response.iter_content(chunk_size=4096):
 				if self.__cancel:
 					break
-				if self.pause == True:
-					print("\npaused\n")
+				if self.pause:
 					while self.pause:
 						self.__start += 0.1
 						time.sleep(0.1)
+
 				self.downloaded += len(data)
 				self.percents = int(self.downloaded * 100 / self.size)
 				f.write(data)
 
 				self.__now2 = time.time()
 				if self.__now2 - self.__now1 > 0.5:
-					self.__curent2 = self.downloaded
-					self.speed = (self.__curent2 - self.__curent1)*2
-
+					self.speed = (self.downloaded - self.__curent1)*2
 					self.__now1 = self.__now2
-					self.__curent1 = self.__curent2
+					self.__curent1 = self.downloaded
 
 
 			self.finished = True
