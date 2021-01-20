@@ -150,4 +150,4 @@ class Downloader:
 		if thread == True:
 			threading.Thread(target=self.__downloading, daemon=True).start()
 		else:
-			self.downloading()
+			self.__downloading()
